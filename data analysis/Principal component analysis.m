@@ -47,12 +47,12 @@ moyenne= sum(IRIS)/N
 for j=1:4
     Xc(:,j)= IRIS(:,j)-moyenne(j)
 end
-disp(' The centered matrix : ') % La matrice centr�e
+disp(' The centered matrix : ') % La matrice centrée
 Xc
 for j=1:4
-    Xc(:,j)= IRIS(:,j)-moyenne(j)
+    Xc(:,j)= IRIS(:,j)-moyenne(j);
 end
-disp(' The centered matrix : ') % La matrice centr�e
+disp(' The centered matrix : ') % La matrice centrée
 Xc
 
 
@@ -62,13 +62,13 @@ end
 disp (' Lambda :') % Lambda
 jj
 
-disp (' The reduced centered matrix :') % La matrice centr�e r�duite
+disp (' The reduced centered matrix :') % La matrice centrée réduite
 Y=[ (Xc(:,1)/jj(1)) (Xc(:,2)/jj(2)) (Xc(:,3)/jj(3)) (Xc(:,4)/jj(4))]
 
-disp (' The normalized matrix :') % La matrice normalis�e
+disp (' The normalized matrix :') % La matrice normalisée
 Z=Y/sqrt(N)
 
-disp(' The correlation matrix :') % La matrice de corr�lation
+disp(' The correlation matrix :') % La matrice de corrélation
 R=(Z'*Z)
   
 [vecteur,valeur]=eigs(R);
@@ -101,38 +101,38 @@ figure(1);
 
 figure(2);
     p1=scatter(Coord(1:50,1),Coord(1:50,2),9,'r*');
-    xlabel('sepal length'); % longueur de s�pale
-    ylabel('sepal width'); % largeur de s�pale
+    xlabel('sepal length'); % longueur de sépale
+    ylabel('sepal width'); % largeur de sépale
     hold on;
     p2=scatter(Coord(51:100,1),Coord(51:100,2),9,'g*');
-    xlabel('sepal length'); % longueur de s�pale
-    ylabel('sepal width'); % largeur de s�pale
+    xlabel('sepal length'); % longueur de sépale
+    ylabel('sepal width'); % largeur de sépale
     hold on;
     p3=scatter(Coord(101:150,1),Coord(101:150,2),9,'b*');
-    xlabel('sepal length'); % longueur de s�pale
-    ylabel('sepal width'); % largeur de s�pale
+    xlabel('sepal length'); % longueur de sépale
+    ylabel('sepal width'); % largeur de sépale
     hold on;
     legend([p1(1),p2(1),p3(1)],'I.Setosa','I.Versicolor','I.Virginica');
-    title('The coordinates of the individuals in the factorial plane'); % Les coordonn�es des individus dans plan factoriel
+    title('The coordinates of the individuals in the factorial plane'); % Les coordonnées des individus dans plan factoriel
     grid on;
 
 
 figure(3);
     p1=compass(L(1,1),L(1,2),'blue');
-    text(L(1,1),L(1,2),'\leftarrow co�f N�1 ',...
+    text(L(1,1),L(1,2),'\leftarrow coéf N=1 ',...
     'HorizontalAlignment','left')
     hold on;
     p2=compass(L(2,1),L(2,2),'red');
-    text(L(2,1),L(2,2),'\leftarrow co�f N�2 ',...
+    text(L(2,1),L(2,2),'\leftarrow coéf N=2 ',...
     'HorizontalAlignment','left')
     hold on;
     p3=compass(L(3,1),L(3,2),'green');
-    text(L(3,1),L(3,2),'\leftarrow co�f N�3 ',...
+    text(L(3,1),L(3,2),'\leftarrow coéf N=3 ',...
     'HorizontalAlignment','left')
     hold on;
     p4=compass(L(4,1),L(4,2),'black');
-    text(L(4,1),L(4,2),'\leftarrow co�f N�4 ',...
+    text(L(4,1),L(4,2),'\leftarrow coéf N=4 ',...
     'HorizontalAlignment','left')
-    title('The circle of correlation of variables by angles'); % Le cercle de corr�lation des variables par les angles
+    title('The circle of correlation of variables by angles'); % Le cercle de corrélation des variables par les angles
     hold on;
     grid on ;
