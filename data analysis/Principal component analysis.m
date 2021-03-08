@@ -78,7 +78,7 @@ Vp=sort((eig(R).'),'descend')
 disp('Vector of eigen values: ') % Vecteur des valeurs propres
 Vp
 
-disp('the coordinates in the factorial plane : ') %les coordonn�es dans le plan factoriel
+disp('the coordinates in the factorial plane : ') %les coordonnées dans le plan factoriel
 Coord=Z*vecteur
 
 for i=1:4
@@ -87,7 +87,7 @@ for i=1:4
     end
 end
 
-disp( 'Correlation coefficients :') %Coefficients de corr�lation
+disp( 'Correlation coefficients :') %Coefficients de corrélation
 disp(L)
 
 
@@ -95,7 +95,7 @@ figure(1);
     plot(Vp);
     xlabel('number of components'); % nombres des composantes
     ylabel('eigen values'); % valeurs propres
-    title('Eigen value cone diagram'); % Diagramme en c�ne des valeurs propres
+    title('Eigen value cone diagram'); % Diagramme en scène des valeurs propres
     grid on;
 
 
